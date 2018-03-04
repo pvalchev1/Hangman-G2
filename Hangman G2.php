@@ -14,7 +14,7 @@ $replase=' _ ';
 	echo "<pre>".print_r($strigL[$j], true)."</pre>";
 $stringArr[$j]=$strigL[$j];
 
-$stringNew=implode (' ',$stringArr);
+
 echo "$stringNew";
 
 
