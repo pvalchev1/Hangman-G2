@@ -9,12 +9,15 @@ include ('includes/header.php');
 				<legend>Преди да започнете</legend>
 					<form method="get" action="game.php">
 						<p>
+							<p> Въведете потребителско име </p>
 							<input type="text" name="user_name" placeholder="required">
 						</p>
 						<p>
+							<p> Въведете парола </p>
 							<input type="password" name="user_password" placeholder="required">
 						</p>
-							<input type="submit" value="Вход">
+							<input type="submit" name="submit" value="Вход">
+							<p>За нов потребител на играта.<a href="create.php"> Регистрация </a> </p>
 					</form>
 			</fieldset>
 	
