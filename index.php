@@ -16,11 +16,16 @@ include ('includes/header.php');
 							<p> Въведете парола </p>
 							<input type="password" name="user_password" placeholder="required">
 						</p>
-							<input type="submit" name="submit" value="Вход">
-							<p>За нов потребител на играта.<a href="create.php"> Регистрация </a> </p>
-					</form>
+							<input type="submit" name="submit" value="Вход">			
 			</fieldset>
+	$select_user = "SELECT * FROM users WHERE user_name='$user'";
+	$select_name_result = mysqli_query($conn, $select_name);
 	
+		if ($select_name_result) {
+			echo "Потребител";
+		} else {
+			echo "Грешно име или парола";
+		}
 
 </body>
 </html>

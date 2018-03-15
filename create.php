@@ -15,15 +15,7 @@ if(empty($_GET['submit'])){
 else{
 	$user = $_GET['user_name'];
 	$user_password = $_GET['user_password'];
-	$select_name = "SELECT * FROM users WHERE user_name='$user'";
-	$select_name_result = mysqli_query($conn, $select_name);
-	$select_password = "SELECT * FROM users WHERE user_password = '$user_password'";
 	
-		if ($select_name_result) {
-			echo "Потребител";
-		} else {
-			echo "Грешно име или парола";
-		}
 	
 	$insert_query = 	"INSERT INTO users (user_name, user_password) 
 						VALUES ('$user', '$user_password')";
@@ -32,8 +24,6 @@ else{
 	$insert_result= mysqli_query($conn, $insert_query);
 	
 			if ($insert_result) {
-		
-
 
 				echo "Успешно добавихте $user в играта!";
 				echo "<p><a href='game.php'> Към играта </a></p>";

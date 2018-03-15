@@ -1,7 +1,8 @@
 <?php 
 include ('includes/header.php');
+include ('includes/create.php');
 ?>
-			<p> Здравей, ........... </p>
+			<p> Здравей, <?php echo "$user"; ?> </p>
 			<p>Познай, кой е този ................... град в България?</p>
 			<p>За целта въведи в полето буква от азбуката.</p>
 				<form method="post" action="hangman.php">
